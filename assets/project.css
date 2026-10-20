@@ -2,6 +2,9 @@
    project.css — Shared styles for all project detail pages
    ============================================================ */
 
+/* ── Always dark — project pages are never affected by portfolio light mode ── */
+html { color-scheme: dark; }
+
 /* ── Root same as main site ── */
 :root {
   --bg: #080808;

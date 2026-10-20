@@ -1,0 +1,9 @@
+# Editor
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node (in case any subproject is added later)
+node_modules/
