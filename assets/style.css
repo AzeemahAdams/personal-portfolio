@@ -1057,3 +1057,207 @@ body.light-mode::-webkit-scrollbar-track { background: var(--bg); }
 .cb.orange { background: #f97316; }
 .cb.purple { background: #8b5cf6; }
 .cb.dark   { background: #3f3f51; }
+
+/* ============================================================
+   PROJECT CARD THUMBNAIL MOCKUPS
+   ============================================================ */
+
+/* Shared thumb base */
+.project-thumb[class*="thumb-"] {
+  position: relative;
+  height: 200px;
+  padding: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Window bar dots */
+.thumb-bar {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+}
+.thumb-bar span {
+  width: 8px; height: 8px; border-radius: 50%;
+}
+.thumb-bar span:nth-child(1) { background: #ff5f57; }
+.thumb-bar span:nth-child(2) { background: #ffbd2e; }
+.thumb-bar span:nth-child(3) { background: #28c840; }
+.thumb-bar.dark span { background: rgba(0,0,0,0.2); }
+
+/* Title */
+.thumb-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 2px;
+  flex-shrink: 0;
+}
+.thumb-title span { color: var(--accent-bright); }
+.thumb-sub {
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 10px;
+  flex-shrink: 0;
+}
+
+/* UI area */
+.thumb-ui { flex: 1; overflow: hidden; }
+
+/* ── Backgrounds ── */
+.thumb-campus   { background: linear-gradient(135deg, #100820 0%, #1e0c3d 100%); }
+.thumb-skillswap{ background: linear-gradient(135deg, #050d1a 0%, #071624 100%); }
+.thumb-edutech  { background: linear-gradient(135deg, #050d18 0%, #071628 100%); }
+.thumb-fka      { background: linear-gradient(135deg, #1a0f08 0%, #2a1a0c 100%); }
+.thumb-fp       { background: linear-gradient(135deg, #160e06 0%, #22140a 100%); }
+
+/* ── CampusConnect UI ── */
+.tui-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.tui-avatar {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a855f7, #6366f1);
+  flex-shrink: 0;
+}
+.tui-lines { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.tl {
+  height: 5px;
+  border-radius: 3px;
+  background: rgba(255,255,255,0.15);
+}
+.tl.wide  { width: 80%; }
+.tl.short { width: 50%; }
+.tl.cyan  { background: rgba(34,211,238,0.4); }
+.tui-badge {
+  font-size: 0.52rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.tui-badge.purple { background: rgba(168,85,247,0.2); color: #a855f7; border: 1px solid rgba(168,85,247,0.3); }
+.tui-badge.cyan   { background: rgba(34,211,238,0.2); color: #22d3ee; border: 1px solid rgba(34,211,238,0.3); }
+.tui-badge.teal   { background: rgba(20,184,166,0.2); color: #14b8a6; border: 1px solid rgba(20,184,166,0.3); }
+.tui-cards {
+  display: flex;
+  gap: 5px;
+  margin-top: 4px;
+}
+.tui-card {
+  flex: 1;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  padding: 6px 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.55rem;
+  color: rgba(255,255,255,0.6);
+}
+.tui-card i { font-size: 0.8rem; }
+
+/* ── SkillSwap UI ── */
+.tui-swap-row { margin-bottom: 5px; }
+.tui-swap-chip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-size: 0.62rem;
+  color: rgba(255,255,255,0.7);
+  gap: 6px;
+}
+.tui-tag {
+  font-size: 0.5rem;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+.tui-tag.teal   { background: #0d9488; color: #fff; }
+.tui-tag.blue   { background: #0ea5e9; color: #fff; }
+.tui-tag.purple { background: #7c3aed; color: #fff; }
+
+/* ── EduTech UI ── */
+.tui-course {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 6px;
+  padding: 5px 7px;
+  margin-bottom: 5px;
+}
+.tui-course-icon {
+  width: 20px; height: 20px;
+  border-radius: 5px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.65rem;
+  flex-shrink: 0;
+}
+.tui-course-info { flex:1; display: flex; flex-direction: column; gap: 3px; }
+.tui-progress-bar {
+  height: 4px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 2px;
+  margin-top: 4px;
+  overflow: hidden;
+}
+.tui-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0891b2, #22d3ee);
+  border-radius: 2px;
+}
+
+/* ── FKA / FP fashion UI ── */
+.thumb-title.fka-dark,
+.thumb-title.fp-dark { color: #fff; }
+.thumb-title.fka-dark span { color: #e8a87c; }
+.thumb-title.fp-dark  span { color: #d4a57a; }
+.thumb-sub.fka-dark-sub,
+.thumb-sub.fp-dark-sub { color: rgba(255,255,255,0.4); }
+
+.fka-grid-mini {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.fka-mini-item {
+  flex: 1;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  padding: 7px 4px;
+  text-align: center;
+  font-size: 0.55rem;
+  color: rgba(255,255,255,0.55);
+}
+.fka-swatch-mini {
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  margin: 0 auto 4px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.fka-tag-row { display: flex; justify-content: center; }
+.fka-tag {
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #e8a87c;
+  border: 1px solid rgba(232,168,124,0.4);
+  border-radius: 4px;
+  padding: 2px 8px;
+}
