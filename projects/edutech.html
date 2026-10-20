@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduTech — ZEE Portfolio</title>
+  <link rel="stylesheet" href="../assets/project.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Force dark always ── */
+    :root {
+      --bg: #060d1a; --bg-secondary: #0a1424;
+      --surface: rgba(255,255,255,0.05); --surface-hover: rgba(255,255,255,0.08);
+      --border: rgba(255,255,255,0.09); --border-accent: rgba(34,211,238,0.5);
+      --text: #f0f0f0; --text-muted: #909090; --text-dim: #555;
+    }
+    html, body { background-color: #060d1a !important; color: #f0f0f0 !important; }
+    .navbar          { background: rgba(6,13,26,0.9) !important; border-color: rgba(255,255,255,0.09) !important; }
+    .navbar.scrolled { background: rgba(6,13,26,0.99) !important; }
+    .navbar-brand    { color: #fff !important; }
+    .nav-back        { color: #909090 !important; border-color: rgba(255,255,255,0.15) !important; }
+    .nav-back:hover  { color: #fff !important; border-color: #22d3ee !important; background: rgba(34,211,238,0.08) !important; }
+    .proj-hero-glow  { background: radial-gradient(circle, rgba(34,211,238,0.18) 0%, transparent 65%); }
+    .proj-breadcrumb, .proj-breadcrumb span { color: #888 !important; }
+    .proj-breadcrumb a { color: #22d3ee !important; }
+    .proj-category   { color: #22d3ee !important; background: rgba(34,211,238,0.08) !important; border-color: rgba(34,211,238,0.3) !important; }
+    .proj-title      { color: #ffffff !important; }
+    .proj-title span { color: #22d3ee !important; }
+    .proj-tagline    { color: #b0b0b0 !important; }
+    .btn-live        { background: #0891b2 !important; border-color: #0891b2 !important; color: #fff !important; }
+    .btn-live:hover  { background: #22d3ee !important; box-shadow: 0 10px 35px rgba(34,211,238,0.3) !important; color: #000 !important; }
+    .btn-github      { color: #fff !important; border-color: rgba(255,255,255,0.2) !important; }
+    .btn-github:hover{ border-color: #22d3ee !important; color: #22d3ee !important; }
+    .proj-meta-strip { border-color: rgba(255,255,255,0.09) !important; }
+    .meta-item       { background: rgba(255,255,255,0.04) !important; border-color: rgba(255,255,255,0.09) !important; }
+    .meta-label      { color: #555 !important; }
+    .meta-value      { color: #f0f0f0 !important; }
+    .meta-value.accent { color: #22d3ee !important; }
+    .proj-preview    { background: #0a1424 !important; border-color: rgba(255,255,255,0.09) !important; }
+    .proj-browser    { background: #111 !important; border-color: rgba(255,255,255,0.09) !important; }
+    .browser-bar     { background: #1a1a1a !important; border-color: rgba(255,255,255,0.09) !important; }
+    .browser-url     { color: #888 !important; background: rgba(255,255,255,0.05) !important; }
+    .browser-body    { background: linear-gradient(135deg, #050d1a 0%, #061828 100%) !important; }
+    .proj-section        { background: #060d1a !important; }
+    .proj-section-label  { color: #22d3ee !important; }
+    .proj-section-title  { color: #ffffff !important; }
+    .proj-section-text   { color: #909090 !important; }
+    .feature-card      { background: rgba(255,255,255,0.04) !important; border-color: rgba(255,255,255,0.09) !important; }
+    .feature-card h4   { color: #ffffff !important; }
+    .feature-card p    { color: #909090 !important; }
+    .feature-icon      { color: #22d3ee !important; border-color: rgba(34,211,238,0.3) !important; background: rgba(34,211,238,0.07) !important; }
+    .feature-card:hover .feature-icon { background: #0891b2 !important; border-color: #0891b2 !important; color: #fff !important; }
+    .feature-card::before { background: linear-gradient(90deg, #0891b2, #22d3ee) !important; }
+    .tech-chip       { background: rgba(255,255,255,0.04) !important; border-color: rgba(255,255,255,0.1) !important; color: #f0f0f0 !important; }
+    .tech-chip i     { color: #22d3ee !important; }
+    .tech-chip:hover { border-color: rgba(34,211,238,0.5) !important; color: #22d3ee !important; background: rgba(34,211,238,0.07) !important; }
+    .proj-cta       { background: #0a1424 !important; border-color: rgba(255,255,255,0.09) !important; }
+    .proj-cta-title { color: #ffffff !important; }
+    .proj-cta-sub   { color: #909090 !important; }
+    .proj-nav-strip      { background: #060d1a !important; border-color: rgba(255,255,255,0.09) !important; }
+    .proj-nav-card       { background: rgba(255,255,255,0.04) !important; border-color: rgba(255,255,255,0.09) !important; }
+    .proj-nav-label      { color: #555 !important; }
+    .proj-nav-name       { color: #ffffff !important; }
+    .proj-nav-icon       { color: #22d3ee !important; }
+    .proj-nav-card:hover { border-color: rgba(34,211,238,0.5) !important; }
+    .site-footer       { background: #060d1a !important; border-color: rgba(255,255,255,0.09) !important; }
+    .footer-copy, .footer-credit { color: #555 !important; }
+    .back-to-portfolio { color: #22d3ee !important; }
+    /* Mockup */
+    .mockup-screen { width:88%; margin:auto; background:rgba(255,255,255,0.04); border:1px solid rgba(34,211,238,0.2); border-radius:10px; padding:22px; text-align:center; }
+    .mockup-logo   { font-size:1.7rem; font-weight:900; color:#fff; letter-spacing:-1px; }
+    .mockup-logo span { color: #22d3ee; }
+    .mockup-tagline { font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:4px; letter-spacing:1px; }
+    .edu-courses { display:flex; gap:8px; margin-top:18px; }
+    .edu-course { flex:1; background:rgba(34,211,238,0.06); border:1px solid rgba(34,211,238,0.15); border-radius:8px; padding:12px 8px; font-size:0.7rem; color:#aaa; text-align:left; }
+    .edu-course strong { display:block; color:#fff; font-size:0.78rem; margin-bottom:3px; }
+    .edu-badge { display:inline-block; background:#22d3ee; color:#000; border-radius:4px; padding:2px 7px; font-size:0.62rem; font-weight:700; margin-top:5px; }
+    .edu-badge.green { background:#4ade80; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html"><span>ZEE</span>.</a>
+      <div class="ms-auto">
+        <a href="../index.html#projects" class="nav-back">
+          <i class="bi bi-arrow-left"></i> Back to Projects
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="proj-hero">
+    <div class="proj-hero-glow"></div>
+    <div class="container">
+      <div class="proj-breadcrumb">
+        <a href="../index.html">Home</a>
+        <i class="bi bi-chevron-right"></i>
+        <a href="../index.html#projects">Projects</a>
+        <i class="bi bi-chevron-right"></i>
+        <span>EduTech</span>
+      </div>
+
+      <span class="proj-category">E-Learning Platform</span>
+      <h1 class="proj-title">Edu<span>Tech</span></h1>
+      <p class="proj-tagline">
+        A modern e-learning platform designed to make quality education accessible,
+        engaging and beautifully organised — from course discovery all the way to completion.
+      </p>
+
+      <div class="proj-actions">
+        <a href="https://eduteck.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-live">
+          <span class="pulse-dot"></span>
+          Visit Live Site <i class="bi bi-arrow-up-right"></i>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-github">
+          <i class="bi bi-github"></i> View on GitHub
+        </a>
+      </div>
+
+      <!-- Meta strip -->
+      <div class="proj-meta-strip">
+        <div class="meta-item">
+          <div class="meta-label">Live URL</div>
+          <div class="meta-value" style="font-size:0.78rem;">eduteck.vercel.app</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Role</div>
+          <div class="meta-value">Frontend Developer</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Status</div>
+          <div class="meta-value accent">Live ✦</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Type</div>
+          <div class="meta-value">Web App</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BROWSER PREVIEW -->
+  <section class="proj-preview">
+    <div class="container" data-aos="fade-up">
+      <div class="proj-browser">
+        <div class="browser-bar">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">https://eduteck.vercel.app</div>
+        </div>
+        <div class="browser-body">
+          <div class="mockup-screen">
+            <div class="mockup-logo">Edu<span>Tech</span></div>
+            <div class="mockup-tagline">Learn anything. Anytime. Anywhere.</div>
+            <div class="edu-courses">
+              <div class="edu-course">
+                <strong>⚛️ React Fundamentals</strong>
+                12 lessons · 4h 30m
+                <div class="edu-badge">ENROLLED</div>
+              </div>
+              <div class="edu-course">
+                <strong>🎨 UI/UX Design</strong>
+                8 lessons · 3h 00m
+                <div class="edu-badge green">NEW</div>
+              </div>
+              <div class="edu-course">
+                <strong>🐍 Python Basics</strong>
+                20 lessons · 6h 15m
+                <div class="edu-badge" style="background:#a855f7;">POPULAR</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="proj-section">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5" data-aos="fade-right">
+          <div class="proj-section-label">Overview</div>
+          <h2 class="proj-section-title">What is EduTech?</h2>
+          <p class="proj-section-text">
+            EduTech is a fully responsive e-learning web application that lets users discover,
+            enrol in, and track online courses across a wide range of subjects — from programming
+            and design to business and personal development.
+          </p>
+          <p class="proj-section-text mt-3">
+            The interface is built around clarity and focus, minimising distractions so learners
+            can stay in flow. The platform is deployed live on Vercel and accessible from any device.
+          </p>
+          <a href="https://eduteck.vercel.app" target="_blank" rel="noopener noreferrer"
+            class="btn-live d-inline-flex mt-4" style="font-size:0.78rem; padding:11px 20px;">
+            <span class="pulse-dot"></span>
+            Open on Vercel <i class="bi bi-arrow-up-right"></i>
+          </a>
+        </div>
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="bi bi-collection-play-fill"></i></div>
+              <h4>Course Catalogue</h4>
+              <p>Browse courses by category, skill level and duration with instant filtering.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon"><i class="bi bi-bar-chart-line-fill"></i></div>
+              <h4>Progress Tracking</h4>
+              <p>Visual progress indicators so learners always know where they are in a course.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon"><i class="bi bi-person-check-fill"></i></div>
+              <h4>Enrolment Flow</h4>
+              <p>Frictionless one-click enrolment with a personalised learning dashboard.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon"><i class="bi bi-play-circle-fill"></i></div>
+              <h4>Lesson Viewer</h4>
+              <p>Clean, distraction-free lesson view with navigation between modules.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon"><i class="bi bi-search"></i></div>
+              <h4>Smart Search</h4>
+              <p>Instantly find courses by keyword, instructor or topic tag.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon"><i class="bi bi-phone-fill"></i></div>
+              <h4>Fully Responsive</h4>
+              <p>Pixel-perfect on mobile, tablet and desktop — learn on any screen.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="proj-section" style="background: var(--bg-secondary); border-top: 1px solid var(--border);">
+    <div class="container" data-aos="fade-up">
+      <div class="proj-section-label">Tech Stack</div>
+      <h2 class="proj-section-title">Built With</h2>
+      <p class="proj-section-text">
+        Deployed on Vercel for instant global delivery, zero-config CI/CD and free HTTPS.
+      </p>
+      <div class="tech-stack mt-4">
+        <div class="tech-chip"><i class="bi bi-filetype-html"></i> HTML5</div>
+        <div class="tech-chip"><i class="bi bi-filetype-css"></i> CSS3</div>
+        <div class="tech-chip"><i class="bi bi-filetype-js"></i> JavaScript</div>
+        <div class="tech-chip"><i class="bi bi-bootstrap-fill"></i> Bootstrap 5</div>
+        <div class="tech-chip"><i class="bi bi-github"></i> Git & GitHub</div>
+        <div class="tech-chip"><i class="bi bi-triangle-fill"></i> Vercel</div>
+        <div class="tech-chip"><i class="bi bi-phone"></i> Responsive Design</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="proj-cta" data-aos="fade-up">
+    <div class="container">
+      <h2 class="proj-cta-title">Ready to explore EduTech?</h2>
+      <p class="proj-cta-sub">The live site is deployed on Vercel — open it right now in your browser.</p>
+      <a href="https://eduteck.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-live">
+        <span class="pulse-dot"></span>
+        Open eduteck.vercel.app <i class="bi bi-arrow-up-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- PROJECT NAVIGATION -->
+  <section class="proj-nav-strip">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-md-4">
+          <a href="campusconnect.html" class="proj-nav-card">
+            <div>
+              <div class="proj-nav-label">Also See</div>
+              <div class="proj-nav-name">CampusConnect →</div>
+            </div>
+            <i class="bi bi-arrow-right proj-nav-icon"></i>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="skillswap.html" class="proj-nav-card">
+            <div>
+              <div class="proj-nav-label">Also See</div>
+              <div class="proj-nav-name">SkillSwap →</div>
+            </div>
+            <i class="bi bi-arrow-right proj-nav-icon"></i>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="kazemaya.html" class="proj-nav-card">
+            <div>
+              <div class="proj-nav-label">Also See</div>
+              <div class="proj-nav-name">Kazemaya Collection →</div>
+            </div>
+            <i class="bi bi-arrow-right proj-nav-icon"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2025 ZEE. All rights reserved.</p>
+        <p class="footer-credit">Built with <span class="heart">♥</span> and lots of ☕</p>
+        <a href="../index.html" class="back-to-portfolio"><i class="bi bi-arrow-left"></i> Back to Portfolio</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jzmsSjmmpBSjR2V2m6q/pkU1uF0N7" crossorigin="anonymous"></script>
+  <script>
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50));
+    function reveal() {
+      document.querySelectorAll('[data-aos]').forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight - 80) el.classList.add('aos-animate');
+      });
+    }
+    window.addEventListener('scroll', reveal); reveal();
+  </script>
+</body>
+</html>

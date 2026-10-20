@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZEE — Frontend Developer</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="#home"><span>ZEE</span>.</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto gap-lg-1">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">PROJECTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">SKILLS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">EXPERIENCE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">CONTACT</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center gap-3">
+            <a href="#contact" class="nav-connect"
+              >LET'S CONNECT <i class="bi bi-arrow-up-right"></i
+            ></a>
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              aria-label="Toggle theme"
+            >
+              <i class="bi bi-moon-fill"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section">
+      <div class="hero-bg-glow"></div>
+      <div class="container">
+        <div class="row align-items-center min-vh-100 py-5">
+          <div class="col-lg-6 hero-left" data-aos="fade-right">
+            <p class="hero-greeting">
+              <span>/</span> HI, I'M AZEEMAH <span class="wave">👋</span>
+            </p>
+            <h1 class="hero-title">
+              FRONTEND<br />
+              <span class="accent typed-text">DEVELOPER</span
+              ><span class="cursor">|</span>
+            </h1>
+            <p class="hero-description">
+              I build responsive, accessible and<br />
+              high performance web applications<br />
+              that look good and solve real problems.
+            </p>
+            <div class="hero-buttons">
+              <a href="#projects" class="btn btn-primary-custom"
+                >VIEW MY WORK <i class="bi bi-arrow-right"></i
+              ></a>
+              <a href="#" class="btn btn-secondary-custom"
+                >DOWNLOAD CV <i class="bi bi-download"></i
+              ></a>
+            </div>
+            <div class="hero-socials">
+              <a href="https://github.com/AzeemahAdams" aria-label="GitHub"
+                ><i class="bi bi-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/omotola-azeemah/"
+                aria-label="LinkedIn"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a href="https://wa.me/2347019243312" aria-label="WhatsApp"
+                ><i class="bi bi-whatsapp"></i
+              ></a>
+              <a href="mailto:omotolaazeemah7@email.com" aria-label="Email"
+                ><i class="bi bi-envelope-fill"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-6 hero-right" data-aos="fade-left">
+            <div class="hero-visual">
+              <div class="hero-glow-ring"></div>
+              <img
+                src="./images/img/heroimg.png"
+                alt="Developer workspace"
+                class="hero-image"
+              />
+              <div class="floating-card code-card">
+                <div class="card-dot pink"></div>
+                <div class="card-dot yellow"></div>
+                <div class="card-dot green"></div>
+                <p class="code-line">
+                  <span class="c-purple">const</span> goal =
+                </p>
+                <p class="code-line">"Build products</p>
+                <p class="code-line">that make an</p>
+                <p class="code-line">impact";</p>
+              </div>
+              <div class="floating-card learning-card">
+                <p class="card-label">Currently learning</p>
+                <ul>
+                  <li><span class="dot accent-dot"></span>React</li>
+                  <li><span class="dot accent-dot"></span>Tailwind CSS</li>
+                  <li><span class="dot accent-dot"></span>REST APIs</li>
+                  <li><span class="dot accent-dot"></span>TypeScript</li>
+                </ul>
+              </div>
+              <div class="hero-badge">
+                <span>BUILD</span><br /><span>CODE</span><br /><span
+                  >REPEAT</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section section-pad">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5" data-aos="fade-right">
+            <p class="section-label">ABOUT ME</p>
+            <h2 class="about-title">
+              Curious. Creative.<br />
+              <span class="accent">Problem Solver.</span>
+            </h2>
+            <p class="about-text">
+              I'm a frontend developer who loves turning ideas into clean,
+              modern and user-friendly interfaces. I enjoy building things for
+              the web and constantly learning new technologies to level up.
+            </p>
+            <a href="#contact" class="btn btn-outline-custom"
+              >MORE ABOUT ME <i class="bi bi-arrow-right"></i
+            ></a>
+          </div>
+          <div class="col-lg-7" data-aos="fade-left">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="about-card">
+                  <div class="about-icon"><i class="bi bi-code-slash"></i></div>
+                  <div>
+                    <h4>Clean Code</h4>
+                    <p>I write maintainable and scalable code.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="about-card">
+                  <div class="about-icon"><i class="bi bi-phone"></i></div>
+                  <div>
+                    <h4>Responsive</h4>
+                    <p>I build for all devices and screen sizes.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="about-card">
+                  <div class="about-icon">
+                    <i class="bi bi-lightning-charge-fill"></i>
+                  </div>
+                  <div>
+                    <h4>Performance</h4>
+                    <p>I care about speed, SEO and best practices.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="about-card">
+                  <div class="about-icon">
+                    <i class="bi bi-person-circle"></i>
+                  </div>
+                  <div>
+                    <h4>User Focused</h4>
+                    <p>I build with real users in mind.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills-section section-pad">
+      <div class="container">
+        <div
+          class="skills-header d-flex justify-content-between align-items-center mb-5 flex-wrap gap-3"
+        >
+          <p class="section-label mb-0">WHAT I WORK WITH</p>
+          <p class="skills-tagline">Always learning. Always building.</p>
+        </div>
+        <div class="skills-grid" data-aos="fade-up">
+          <div class="skill-card">
+            <div class="skill-icon html-icon">&#xe60f;</div>
+            <span class="skill-name">HTML5</span>
+            <div class="skill-dots">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon css-icon">&#xe60e;</div>
+            <span class="skill-name">CSS3</span>
+            <div class="skill-dots">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon js-icon">JS</div>
+            <span class="skill-name">JavaScript</span>
+            <div class="skill-dots">
+              <span></span><span></span><span></span><span class="dim"></span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon react-icon">
+              <i class="bi bi-brilliance"></i>
+            </div>
+            <span class="skill-name">React</span>
+            <div class="skill-dots">
+              <span></span><span></span><span></span><span class="dim"></span
+              ><span class="dim"></span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon vue-icon">V</div>
+            <span class="skill-name">Vue.js</span>
+            <div class="skill-dots">
+              <span></span><span></span><span></span><span class="dim"></span
+              ><span class="dim"></span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon tw-icon">~</div>
+            <span class="skill-name">Tailwind CSS</span>
+            <div class="skill-dots">
+              <span></span><span></span><span></span><span></span
+              ><span class="dim"></span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon api-icon">API</div>
+            <span class="skill-name">API / REST</span>
+            <div class="skill-dots">
+              <span></span><span></span><span></span><span class="dim"></span
+              ><span class="dim"></span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon git-icon"><i class="bi bi-github"></i></div>
+            <span class="skill-name">Git & GitHub</span>
+            <div class="skill-dots">
+              <span></span><span></span><span></span><span></span
+              ><span class="dim"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects-section section-pad">
+      <div class="container">
+        <div
+          class="d-flex justify-content-between align-items-center mb-5 flex-wrap gap-3"
+        >
+          <p class="section-label mb-0">FEATURED PROJECTS</p>
+          <a href="#" class="view-all-link"
+            >VIEW ALL PROJECTS <i class="bi bi-arrow-right"></i
+          ></a>
+        </div>
+        <div class="row g-4">
+          <!-- Project 1 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+            <a href="projects/campusconnect.html" class="project-card-link">
+              <div class="project-card">
+                <div class="project-thumb">
+                  <div class="project-mockup campus">
+                    <div class="mockup-bar">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="mockup-content">
+                      <div class="mockup-title">CampusConnect</div>
+                      <div class="mockup-sub">Student Platform</div>
+                    </div>
+                  </div>
+                  <div class="project-overlay">
+                    <i class="bi bi-arrow-up-right-circle-fill"></i>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-name">CampusConnect</h3>
+                  <p class="project-desc">
+                    A university platform that connects students, lecturers and
+                    departments seamlessly.
+                  </p>
+                  <div class="project-tags">
+                    <span>HTML</span><span>CSS</span><span>JS</span
+                    ><span>Bootstrap</span>
+                  </div>
+                </div>
+                <span class="project-link-btn"
+                  ><i class="bi bi-arrow-up-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+          <!-- Project 2 -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <a href="projects/skillswap.html" class="project-card-link">
+              <div class="project-card">
+                <div class="project-thumb dark-thumb">
+                  <div class="project-mockup skillswap">
+                    <div class="mockup-bar">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="mockup-content">
+                      <div class="mockup-title">SkillSwap</div>
+                      <div class="mockup-sub accent">Peer Learning</div>
+                    </div>
+                  </div>
+                  <div class="project-overlay">
+                    <i class="bi bi-arrow-up-right-circle-fill"></i>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-name">SkillSwap</h3>
+                  <p class="project-desc">
+                    A platform where people can trade skills and learn from each
+                    other.
+                  </p>
+                  <div class="project-tags">
+                    <span>HTML</span><span>CSS</span><span>JS</span
+                    ><span>Bootstrap</span>
+                  </div>
+                </div>
+                <span class="project-link-btn"
+                  ><i class="bi bi-arrow-up-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+          <!-- Project 3 -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
+            <a href="projects/edutech.html" class="project-card-link">
+              <div class="project-card">
+                <div class="project-thumb edutech-thumb">
+                  <div class="project-mockup edutech">
+                    <div class="mockup-bar">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="mockup-content">
+                      <div class="mockup-title">EduTech</div>
+                      <div class="mockup-sub accent">Learning Platform</div>
+                    </div>
+                  </div>
+                  <div class="project-overlay">
+                    <i class="bi bi-arrow-up-right-circle-fill"></i>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-name">EduTech</h3>
+                  <p class="project-desc">
+                    A modern e-learning platform that makes quality education
+                    accessible and engaging for everyone.
+                  </p>
+                  <div class="project-tags">
+                    <span>HTML</span><span>CSS</span><span>JS</span
+                    ><span>Bootstrap</span>
+                  </div>
+                </div>
+                <span class="project-link-btn"
+                  ><i class="bi bi-arrow-up-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Project 4 -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <a href="projects/FKA.html" class="project-card-link">
+              <div class="project-card">
+                <div class="project-thumb light-thumb">
+                  <div class="project-mockup kazemaya">
+                    <div class="mockup-bar dark-bar">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="mockup-content">
+                      <div class="mockup-title dark-title">FKA Atelier</div>
+                      <div class="mockup-sub dark-sub">
+                        Modest Fashion Brand
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project-overlay">
+                    <i class="bi bi-arrow-up-right-circle-fill"></i>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-name">FKA Atelier</h3>
+                  <p class="project-desc">
+                    A modern and elegant fashion brand website built with a
+                    clean UI/UX.
+                  </p>
+                  <div class="project-tags">
+                    <span>HTML</span><span>CSS</span><span>JS</span
+                    ><span>Bootstrap</span>
+                  </div>
+                </div>
+                <span class="project-link-btn"
+                  ><i class="bi bi-arrow-up-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+          
+          <!-- Project 5-->
+           <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <a href="projects/FP.html" class="project-card-link">
+              <div class="project-card">
+                <div class="project-thumb light-thumb">
+                  <div class="project-mockup FP">
+                    <div class="mockup-bar dark-bar">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="mockup-content">
+                      <div class="mockup-title dark-title">Fabulous Palace</div>
+                      <div class="mockup-sub dark-sub">
+                        Where Modesty is Crowned
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project-overlay">
+                    <i class="bi bi-arrow-up-right-circle-fill"></i>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-name">Fabulous Palace</h3>
+                  <p class="project-desc">
+                    A modern, modest and elegant fashion brand website built with a
+                    clean UI/UX.
+                  </p>
+                  <div class="project-tags">
+                    <span>HTML</span><span>CSS</span><span>JS</span
+                    ><span>Bootstrap</span>
+                  </div>
+                </div>
+                <span class="project-link-btn"
+                  ><i class="bi bi-arrow-up-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Project 6 — Calcora -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="250"
+          >
+            <a href="projects/calcora.html" class="project-card-link">
+              <div class="project-card">
+                <div class="project-thumb calcora-thumb">
+                  <div class="project-mockup calcora">
+                    <div class="mockup-bar">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="mockup-content">
+                      <div class="mockup-title">Calcora</div>
+                      <div class="mockup-sub accent">Scientific Calculator</div>
+                    </div>
+                    <!-- mini calculator preview -->
+                    <div class="calc-preview">
+                      <div class="calc-screen">0</div>
+                      <div class="calc-btns">
+                        <span class="cb teal">sin</span>
+                        <span class="cb teal">cos</span>
+                        <span class="cb teal">tan</span>
+                        <span class="cb red">C</span>
+                        <span class="cb orange">DEL</span>
+                        <span class="cb purple">%</span>
+                        <span class="cb purple">÷</span>
+                        <span class="cb dark">7</span>
+                        <span class="cb dark">8</span>
+                        <span class="cb dark">9</span>
+                        <span class="cb purple">×</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project-overlay">
+                    <i class="bi bi-arrow-up-right-circle-fill"></i>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-name">Calcora</h3>
+                  <p class="project-desc">
+                    A sleek scientific calculator with trig functions, keyboard
+                    support and a vibrant dark UI. Live on Vercel.
+                  </p>
+                  <div class="project-tags">
+                    <span>HTML</span><span>CSS</span><span>JS</span><span>Vercel</span>
+                  </div>
+                </div>
+                <span class="project-link-btn"
+                  ><i class="bi bi-arrow-up-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section section-pad">
+      <div class="container">
+        <div class="contact-inner">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-5" data-aos="fade-right">
+              <p class="section-label">LET'S WORK TOGETHER</p>
+              <h2 class="contact-title">
+                Have a project in mind?<br />
+                Let's
+                <span class="accent underline-anim">build it together.</span>
+              </h2>
+            </div>
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <p class="contact-note">
+                I'm open to opportunities, collaborations or just a friendly
+                hello.
+              </p>
+              <a
+                href="mailto:omotolaazeemah7@gmail.com"
+                class="btn btn-primary-custom contact-btn"
+              >
+                EMAIL ME <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-left"
+              data-aos-delay="150"
+            >
+              <div class="contact-links">
+                <!-- github -->
+                <a
+                  href="https://github.com/AzeemahAdams"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-link-item"
+                >
+                  <i class="bi bi-github"></i>
+                  <span>github.com/AzeemahAdams</span>
+                  <i class="bi bi-arrow-up-right ms-auto"></i>
+                </a>
+                <!-- linked in -->
+                <a
+                  href="https://www.linkedin.com/in/omotola-azeemah/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-link-item"
+                >
+                  <i class="bi bi-linkedin"></i>
+                  <span>linkedin.com/in/omotola-azeemah</span>
+                  <i class="bi bi-arrow-up-right ms-auto"></i>
+                </a>
+                <!-- mail -->
+                <a
+                  href="mailto:omotolaazeemah7@gmail.com"
+                  class="contact-link-item"
+                >
+                  <i class="bi bi-envelope-fill"></i>
+                  <span>omotolaazeemah7@gmail.com</span>
+                  <i class="bi bi-arrow-up-right ms-auto"></i>
+                </a>
+                <!-- whatsapp -->
+                <a
+                  href="https://wa.me/2347019243312?text=Hello%20I%20found%20your%20portfolio!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-link-item"
+                >
+                  <i class="bi bi-whatsapp"></i>
+                  <span>Chat on WhatsApp</span>
+                  <i class="bi bi-arrow-up-right ms-auto"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div
+          class="footer-inner d-flex justify-content-between align-items-center flex-wrap gap-3"
+        >
+          <p class="footer-copy">© 2026 ZEE. All rights reserved.</p>
+          <p class="footer-credit">
+            Built with <span class="heart">♥</span> and lots of <span>☕</span>
+          </p>
+          <a href="#home" class="back-to-top"
+            >Back to top <i class="bi bi-arrow-up"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jzmsSjmmpBSjR2V2m6q/pkU1uF0N7"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/main.js"></script>
+  </body>
+</html>
